@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Food Freshness Detector</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>🍎 AI Food Freshness Detector</h1>
+        <p>Smart AI-powered food freshness analysis</p>
+    </header>
+
+    <main class="container">
+
+        <h2>Check Your Food Freshness</h2>
+
+        <p>Upload an image of fruits or vegetables.</p>
+
+        <input
+            type="file"
+            id="imageInput"
+            accept="image/*"
+        >
+
+        <div class="preview">
+            <img id="previewImage" alt="Food preview">
+        </div>
+
+        <button id="detectBtn" disabled onclick="detectFood()">
+            Detect Freshness
+        </button>
+
+        <p id="status"></p>
+
+        <div class="result" id="result">
+            <h3>Detection Result</h3>
+            <p id="prediction">Your result will appear here.</p>
+            <p id="confidence"></p>
+        </div>
+
+        <p class="disclaimer">
+            AI predictions are estimates based on image appearance.
+            They cannot confirm whether food is safe to eat.
+        </p>
+
+    </main>
+
+    <footer>
+        <p>© 2026 AI Food Freshness Detector</p>
+        <p>Developed by Sankalp Tech Club Project Team</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
